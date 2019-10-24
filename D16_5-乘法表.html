@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<p id = 'demo'></p>
+<table>
+<caption>九九乘法表</caption>
+</caption>
+
+</table>
+	 <script>
+	 var d = new Date();
+	 if (d.getHours() <= 12){
+	   document.getElementById("demo").innerHTML = 'goodmorning';
+	 } else{
+	 	document.getElementById("demo").innerHTML = 'goodevening';
+	 }
+	 var tb = document.querySelector('table')
+	for(var i = 1;i<=9;i++){		
+		var tr = document.createElement("tr");
+		tb.appendChild(tr);
+		for(var j = 1;j<=9;j++){
+		var result = i+ ' * '+ j + ' = '+ i*j
+		var td = document.createElement('td')
+		td.innerHTML = result;
+		tr.appendChild(td)			
+		}
+	}
+
+
+	 </script>
+</body>
+</html>

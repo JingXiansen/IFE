@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <title>动画</title>
+	<style>
+		#one {
+			width:480px;
+			height:480px;
+			background: url('http://ife.baidu.com/2016/static/img/erik_ce204002.jpg') no-repeat 0px 0px;
+		}
+	</style> 
+</head>
+<body>
+	<div id = 'one'>
+	</div>
+	<script>
+	var tu = document.getElementById('one')
+	var i = 1;
+	function jingling() {
+	if (i<16){
+	i++;
+	tu.style.backgroundPositionY= -480*i +'px';
+	var id = setTimeout(jingling,188)
+	}else {	jingling1()
+	
+	}  }
+	function jingling1(){
+	if(i>0){tu.style.backgroundPositionY = -480*i +'px';i--;
+	var id1 = setTimeout(jingling1,188)}else {
+	setTimeout(jingling,188)}	
+	}	
+	jingling()
+	
+	</script>
+
+</body>
+</html>

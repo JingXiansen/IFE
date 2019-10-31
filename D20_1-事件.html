@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>事件</title>
+</head>
+<body>
+	<input id='name' type='text' >
+	<button id='submit-btn'>submit</button>
+</body>
+<script>
+//获取键值
+
+	document.onkeydown = function haoma(event) {console.log(event.keyCode)};
+	
+	var button1 = document.getElementById('submit-btn')
+	var input1 = document.getElementById('name') 	
+	button1.onclick = function () {
+	console.log(input1.value)};
+	
+	input1.onkeydown = function (event) {
+	if (event.keyCode==13) {
+	  console.log(input1.value)
+	}
+	if (event.keyCode == 27){
+		input1.value = '';
+	}
+	};
+
+	
+</script>
+/*
+当点击按钮 submit-btn 时，在console中输出 name 中的内容
+在输入过程中，如果按回车键，则同样执行上一条的需求
+在输入过程中，如果按 ESC 键，则把输入框中的内容清空	  */
+
+</html>
